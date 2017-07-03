@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Tabata</title>
+    <meta name="description" content="Mouse tracker">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">Tabata</div>
+    <div class="wrapper">
+        <div class="box a">
+            <div id="timerClockFrame">00:00</div>
+        </div>
+        <div class="box b">
+            <ul id="our-list">
+                <span class="fieldSpan">Prepare</span>
+                <li id="timerSetPrepTime">
+                    <form class="fieldForm" name="SetPrepTime">
+                        <input  type="text" class="field" name="minutes" placeholder="00:00">
+                    </form>
+                </li>
+
+                <span class="fieldSpan">Work</span>
+                <li id="timerSetWorkTime">
+                    <form class="fieldForm" name="SetWorkTime">
+                        <input type="text" class="field" name="minutes" placeholder="00:00">
+                    </form>
+                </li>
+
+                <span class="fieldSpan">Reset</span>
+                <li id="timerSetResetTime">
+                    <form class="fieldForm" name="SetResetTime">
+                        <input type="text" class="field" name="minutes" placeholder="00:00">
+                    </form>
+                </li>
+
+                <span class="fieldSpan">Cycles</span>
+                <li id="timerSetCycles">
+                    <form class="fieldForm" name="SetCycles">
+                        <input type="text" class="field" name="cycles" placeholder="01">
+                    </form>
+                </li>
+
+                <span class="fieldSpan">Tabatas</span>
+                <li id="timerSetTabatas">
+                    <form class="fieldForm" name="SetTabatas">
+                        <input type="text" class="field" name="tabatas" placeholder="01">
+                    </form>
+                </li>
+            </ul>
+            <div id="control">
+               
+                <button id="start">START</button>
+                
+            </div>
+            
+        </div>
+        <div class="box c">
+            <div id="numberOfTabatasFrame">00</div>
+            <span id=spanTabatas>Tabatas</span>
+        </div>
+        <div class="box d">
+            <div id="numberOfCyclesFrame">00</div>
+            <span id=spanCycles>Cycles</span>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

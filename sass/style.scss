@@ -1,0 +1,169 @@
+@import 'colors';
+
+.gridCenter {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 5rem;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", serif;
+    padding-top: 1rem;
+    border-bottom: solid 1px rgba(127, 113, 97, 1);
+    @extend .shadowHeader;
+    @extend .colorHeader;
+    color: #7F6D59;
+}
+
+.wrapper {
+    @extend .colorWrapper;
+    height: 1050px;
+    grid-template-columns: 310px 310px 310px;
+    grid-template-rows: 300px 200px;
+    grid-gap: 10px 15px;
+    @extend .gridCenter;
+}
+
+.box {
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 150%;
+    @extend .shadowBox;
+}
+
+.a {
+    @extend .colorA;
+    grid-column: 1 / span 2;
+    @extend .gridCenter;
+    grid-template-columns: 80%;
+    grid-template-rows: 50%;
+}
+
+.b {
+    @extend .colorB;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    @extend .gridCenter;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 30%;
+}
+
+.b>ul {
+    @extend .gridCenter;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(5, 15%);
+    grid-row-gap: 20px;
+    grid-column-gap: 2px;
+}
+
+.b>ul>li {
+    @extend .gridCenter;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+.fieldForm {
+    @extend .gridCenter;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+.field {
+    @extend .colorField;
+    border: solid #7F7161 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: right;
+    padding-right: 10px;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", serif;
+    font-size: 35px;
+    text-shadow: #000 0 1px 0;
+    border-radius: 0px 15px 15px 0px;
+    color: #7F7972;
+}
+
+.fieldSpan {
+    @extend .colorField;
+    @extend .gridCenter;
+    border: solid #7F7161 1px;
+    border-radius: 15px 0px 0px 15px;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", serif;
+    font-size: 25px;
+    text-shadow: #000 0 1px 0;
+    color: #7F7972;
+}
+
+.field::placeholder {
+    text-align: right;
+    font-size: 35px;
+    opacity: 0.3;
+}
+
+#control {
+    @extend .gridCenter;
+    grid-template-columns: 80%;
+    grid-template-rows: 35%;
+}
+
+#start {
+    @extend .colorField;
+    border: solid #7F7161 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", serif;
+    font-size: 2.5rem;
+    color: #7F7972;
+}
+
+.c {
+    @extend .colorB;
+    grid-column: 1;
+    grid-row: 2;
+    @extend .gridCenter;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+}
+
+#spanTabatas,
+#spanCycles {
+    @extend .gridCenter;
+    font-size: 3rem;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", serif;
+    text-shadow: #000 0 1px 0;
+    color: #fff;
+}
+
+.d {
+    @extend .colorB;
+    grid-column: 2;
+    grid-row: 2;
+    @extend .gridCenter;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+}
+
+#timerClockFrame {
+    @extend .gridCenter;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", serif;
+    font-size: 11rem;
+    text-shadow: #000 0 1px 0;
+}
+
+#numberOfCyclesFrame {
+    @extend .gridCenter;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", serif;
+    font-size: 9rem;
+    text-shadow: #000 0 1px 0;
+}
+
+#numberOfTabatasFrame {
+    @extend .gridCenter;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", serif;
+    font-size: 9rem;
+    text-shadow: #000 0 1px 0;
+}
